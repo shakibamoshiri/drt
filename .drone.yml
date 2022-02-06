@@ -5,6 +5,7 @@ type: docker
 steps:
 - name: test
   image: alpine
+  pull: never
   commands:
   - echo "It worked!"
   - $PWD/script.sh
