@@ -11,5 +11,5 @@ steps:
   - $PWD/script.sh
 
 node:
-  tag: host_xvision
+  tag: host_docker
 
