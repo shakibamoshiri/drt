@@ -8,3 +8,7 @@ steps:
   commands:
   - echo "It worked!"
   - $PWD/script.sh
+
+node:
+  tag: host_docker
+
