@@ -5,12 +5,11 @@ name: default
 steps:
 - name: greeting
   image: bash:4.4
-  pull: never
   commands:
   - $PWD/script.sh
 
 node:
-  tag: aectest-docker
+  tag: docker
 trigger:
   branch:
   - master
