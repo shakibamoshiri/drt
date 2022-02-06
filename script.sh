@@ -30,3 +30,5 @@ cd $target_dir;
 echo "ls";
 ls -la
 
+exit 1
+
