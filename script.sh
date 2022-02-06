@@ -3,8 +3,8 @@
 echo "### running script.sh ###";
 echo
 
-# echo "install curl";
-# apk --update add  --no-cach curl;
+echo "install curl";
+apk --update add  --no-cach curl;
 
 source_dir=$PWD
 target_dir="/target_dir";
