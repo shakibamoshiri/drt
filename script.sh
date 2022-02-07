@@ -8,6 +8,6 @@ cd /root/webhook
 git pull origin master
 
 echo "ls";
-ls -la
+ls -la file-not-found
 
 
