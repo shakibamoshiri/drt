@@ -9,8 +9,8 @@ platform:
 steps:
 - name: greeting
   commands:
-  - cd /root/webhook
-  - git pull
+  - pwd
+  - sleep 300
 
 node:
   tag: host_docker
