@@ -1,11 +1,11 @@
 kind: pipeline
-type: docker
+type: exec
 name: default
 
 steps:
 - name: runner-test
   # image: artifactory.aecadmin.ir/ravan/alpine
-  image: alpine
+  # image: alpine
   commands:
   - $PWD/script.sh
 
