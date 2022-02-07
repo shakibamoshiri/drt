@@ -9,7 +9,8 @@ platform:
 steps:
 - name: greeting
   commands:
-  - echo hello world
+  - cd /root/webhook
+  - git pull
 
 node:
   tag: host_docker
