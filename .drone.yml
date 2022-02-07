@@ -1,14 +1,15 @@
-name: drone-test
 kind: pipeline
-type: docker
+type: exec
+name: default
+
+platform:
+  os: linux
+  arch: amd64
 
 steps:
-- name: test
-  image: alpine
-  pull: never
+- name: greeting
   commands:
-  - echo "It worked!"
-  - $PWD/script.sh
+  - echo hello world
 
 node:
   tag: host_docker
