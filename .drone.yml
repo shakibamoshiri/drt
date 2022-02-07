@@ -10,7 +10,7 @@ steps:
 - name: greeting
   commands:
   - pwd
-  - sleep 300
+  - whoami
 
 node:
   tag: host_docker
