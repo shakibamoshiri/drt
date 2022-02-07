@@ -11,6 +11,8 @@ steps:
   commands:
   - pwd
   - whoami
+  - cd /root/webhook
+  - git pull origin master
 
 node:
   tag: host_docker
