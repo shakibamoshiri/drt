@@ -2,11 +2,12 @@
 
 echo "### running script.sh ###";
 
-echo "make a tmp dir:"
-cd `mktemp -d`;
+echo "check DRONE_BRANCH:"
+echo $DRONE_BRANCH;
 
-echo "git clone:"
-git clone git@repo.ravanertebat.com:sh.moshiri/drone_1.git
+echo $DRONE_BUILD_LINK
+echo $DRONE_BUILD_NUMBER
+echo $DRONE_BUILD_PARENT
+echo $DRONE_BUILD_STARTED
+echo $DRONE_BUILD_STATUS
 
-echo "ls -la";
-ls -la
