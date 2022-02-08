@@ -1,6 +1,22 @@
 kind: pipeline
 type: exec
-name: default
+name: exec-git-cloneclone
+
+steps:
+- name: runner-test
+  # image: artifactory.aecadmin.ir/ravan/alpine
+  # image: alpine
+  commands:
+  - $PWD/script.sh
+
+node:
+  tag: host_docker
+
+---
+
+kind: pipeline
+type: docker
+name: docker-git-clone
 
 steps:
 - name: runner-test
