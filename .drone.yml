@@ -21,9 +21,9 @@ name: docker-git-clone
 steps:
 - name: runner-test
   # image: artifactory.aecadmin.ir/ravan/alpine
-  # image: alpine
+  image: alpine
   commands:
-  - $PWD/script.sh
+  - echo "hello alpine linux"
 
 node:
   tag: host_docker
