@@ -1,29 +1,38 @@
 kind: pipeline
 type: exec
-name: exec-git-cloneclone
-
-steps:
-- name: runner-test
-  # image: artifactory.aecadmin.ir/ravan/alpine
-  # image: alpine
-  commands:
-  - $PWD/script.sh
-
-node:
-  tag: host_docker
-
----
-
-kind: pipeline
-type: docker
-name: docker-git-clone
+name: exec-git-clone
 
 steps:
 - name: runner-test
   # image: artifactory.aecadmin.ir/ravan/alpine
   image: alpine
   commands:
-  - echo "hello alpine linux"
+  - echo "echo master branch"
 
 node:
   tag: host_docker
+trigger:
+  branch:
+  - master
+  event:
+  - push
+
+---
+kind: pipeline
+type: docker
+name: docker-echo
+
+steps:
+- name: runner-test
+  # image: artifactory.aecadmin.ir/ravan/alpine
+  image: alpine
+  commands:
+  - echo "hello dev branch"
+
+node:
+  tag: host_docker
+trigger:
+  branch:
+  - dev
+  event:
+  - push
