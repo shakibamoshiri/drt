@@ -1,13 +1,12 @@
 #!/bin/sh
 
 echo "### running script.sh ###";
-echo
 
-cd /root/webhook
+echo "make a tmp dir:"
+cd `mktemp -d`;
 
-git pull origin master
+echo "git clone:"
+git clone git@repo.ravanertebat.com:sh.moshiri/drone_1.git
 
-echo "ls";
-ls -la script.sh
-
-
+echo "ls -la";
+ls -la
