@@ -33,7 +33,6 @@ trigger:
   branch:
   - dev
   event:
-  - push
   - promote
   target:
   - prod
