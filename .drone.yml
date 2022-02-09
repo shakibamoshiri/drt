@@ -8,7 +8,6 @@ steps:
   # image: alpine
   commands:
   - echo "echo master branch"
-
 node:
   tag: host_docker
 trigger:
@@ -27,8 +26,7 @@ steps:
   # image: artifactory.aecadmin.ir/ravan/alpine
   image: alpine
   commands:
-  - echo "hello dev branch"
-
+  - echo "hello dev branch one more time"
 node:
   tag: host_docker
 trigger:
