@@ -1,9 +1,9 @@
 kind: pipeline
 type: exec
-name: exec-git-clone
+name: exec-update-dev
 
 steps:
-- name: runner-test
+- name: git clone
   # image: artifactory.aecadmin.ir/ravan/alpine
   # image: alpine
   commands:
@@ -19,17 +19,36 @@ trigger:
 ---
 kind: pipeline
 type: docker
-name: docker-echo
-
+name: docker-update-dev
 steps:
-- name: runner-test
+- name: say hello
   # image: artifactory.aecadmin.ir/ravan/alpine
   image: alpine
   commands:
-  - echo "hello dev branch one more time"
+  - echo "hello dev branch"
 node:
   tag: host_docker
 trigger:
   branch:
   - dev
 
+---
+kind: pipeline
+type: docker
+name: docker-promote-dev
+
+steps:
+- name: promote 
+  # image: artifactory.aecadmin.ir/ravan/alpine
+  image: alpine
+  commands:
+  - echo "hello dev branch for promotion"
+node:
+  tag: host_docker
+trigger:
+  branch:
+  - dev
+  event:
+  - promote
+  target:
+  - prod
