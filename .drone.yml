@@ -37,3 +37,5 @@ trigger:
   event:
   - push
   - promote
+  target:
+  - prod
