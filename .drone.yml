@@ -6,6 +6,8 @@ steps:
 - name: runner-test
   commands:
   - echo "echo master branch with exec-runner"
+  - pwd
+  - git log --oneline
 
 node:
   tag: host_docker
