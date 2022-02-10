@@ -4,10 +4,8 @@ name: exec-update-dev
 
 steps:
 - name: git clone
-  # image: artifactory.aecadmin.ir/ravan/alpine
-  # image: alpine
   commands:
-  - echo "echo master branch"
+  - echo "hello dev branch with exec-runner"
 node:
   tag: host_docker
 trigger:
