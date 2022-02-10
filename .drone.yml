@@ -44,7 +44,7 @@ steps:
   commands:
   - echo "hello dev branch for promotion"
 node:
-  tag: host_xvision
+  tag: host_docker
 trigger:
   branch:
   - dev
