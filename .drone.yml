@@ -4,10 +4,8 @@ name: exec-git-clone
 
 steps:
 - name: runner-test
-  # image: artifactory.aecadmin.ir/ravan/alpine
-  # image: alpine
   commands:
-  - echo "echo master branch"
+  - echo "echo master branch with exec-runner"
 
 node:
   tag: host_docker
